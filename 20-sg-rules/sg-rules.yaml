@@ -1,0 +1,23 @@
+
+
+mongodb:
+- name: mongodb_catalogue # mongodb accepting cnnections from catalog
+  src: catalogue
+  dest: mongodb
+  port: 27017
+
+- name: mongodb_bastion # mongodb accepting cnnections from bastion
+  src: bastion
+  dest: mongodb
+  port: 22
+
+- name: mongodb_user # mongodb accepting cnnections from user
+  src: user
+  dest: mongodb
+  port: 27017
+
+bastion:
+- name: bastion_internet # bastion accepting cnnections from internet
+  src: internet/or my home ip
+  dest: bastion
+  port: 22
